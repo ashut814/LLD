@@ -14,7 +14,6 @@ package com.designprinciples.lsp;
 //}
 
 // LSP Fix
-
 // Step 1: Define an interface for chargeable devices
 
 interface Chargeable {
