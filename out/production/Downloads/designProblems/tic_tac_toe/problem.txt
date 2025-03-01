@@ -1,0 +1,58 @@
+1: Design Tic Tac Toe game, 3 X 3 matrix, with 2 players, X and O.
+
+
+Entity	Responsibilities
+Game	Controls the game flow (starting, playing, checking winner).
+Board	Represents the Tic Tac Toe grid and manages moves.
+Player	Represents a player with a name and symbol (X or O).
+Move	Represents a move made by a player (row, col, symbol).
+WinningStrategy	Defines the logic to check for a winner.
+
+
+Relationships:
+
+Game contains a Board and a list of Player objects.
+Game interacts with WinningStrategy to check for a winner.
+Board maintains the game state and handles moves.
+
+UML:
+
++----------------+
+|     Game       |
+|--------------- |
+| - board: Board |
+| - players: List<Player> |
+| - strategy: WinningStrategy |
+|--------------- |
+| + startGame()  |
+| + makeMove()   |
+| + checkWinner() |
++----------------+
+         |
+         v
++----------------+
+|     Board      |
+|--------------- |
+| - grid: char[][] |
+|--------------- |
+| + displayBoard() |
+| + placeMove(row, col, symbol) |
+| + isCellEmpty(row, col) |
++----------------+
+         |
+         v
++----------------+
+|    Player      |
+|--------------- |
+| - name: String |
+| - symbol: char |
+|--------------- |
+| + getMove()    |
++----------------+
+         |
+         v
++----------------+
+| WinningStrategy |
+|--------------- |
+| + checkWinner(board) |
++----------------+
