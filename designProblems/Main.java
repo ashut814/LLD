@@ -16,11 +16,6 @@ public class Main {
 
         libraryService.issueBook("1", student);
         libraryService.issueBook("2", student);
-        libraryService.issueBook("2", student);
-        libraryService.issueBook("2", student);
-        libraryService.issueBook("2", student);
-        libraryService.issueBook("2", student);
-        libraryService.issueBook("2", student);
 
         libraryService.returnBook("2", student);
     }
